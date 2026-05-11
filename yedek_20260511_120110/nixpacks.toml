@@ -1,0 +1,25 @@
+{
+  "providers": [
+    "php"
+  ],
+  "buildImage": "ghcr.io/railwayapp/nixpacks:latest",
+  "variables": {
+    "NIXPACKS_PHP_VERSION": "8.1"
+  },
+  "phases": {
+    "setup": {
+      "nixPkgs": [
+        "php81",
+        "php81Packages.mysqli"
+      ]
+    },
+    "build": {
+      "cmds": [
+        "composer install --no-dev --no-interaction --optimize-autoloader"
+      ]
+    },
+    "start": {
+      "cmd": "php -S 0.0.0.0:$PORT"
+    }
+  }
+}

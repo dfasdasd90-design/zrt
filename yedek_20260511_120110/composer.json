@@ -1,0 +1,13 @@
+{
+  "name": "project/zrt",
+  "description": "Ziraat Bank PHP Project",
+  "require": {
+    "php": "^8.0",
+    "ext-mysqli": "*"
+  },
+  "config": {
+    "platform": {
+      "php": "8.1"
+    }
+  }
+}
